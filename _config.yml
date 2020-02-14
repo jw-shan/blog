@@ -16,7 +16,7 @@ sass:
 permalink: /posts/:title/
 texture:
   title: Jiawei Shan
-  tagline: Personal Blog.
+  tagline: Personal Blog
   date_format: "%b %-d, %Y"
   style: black
   showNav: false
