@@ -21,6 +21,8 @@ texture:
   style: black
   showNav: false
   showPicker: false
+  show_excerpts: true
+  showNav: true
 
   # generate social links in footer
   social_links:
