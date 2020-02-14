@@ -14,6 +14,9 @@ sass:
   sass_dir: _sass
 
 permalink: /posts/:title/
+
+show_excerpts: true
+
 texture:
   title: Jiawei Shan
   tagline: Personal Blog
@@ -21,7 +24,6 @@ texture:
   style: black
   showNav: false
   showPicker: false
-  show_excerpts: true
   showNav: true
 
   # generate social links in footer
