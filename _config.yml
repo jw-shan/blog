@@ -16,6 +16,7 @@ sass:
 permalink: /posts/:title/
 
 show_excerpts: true
+base_url: /blog
 
 texture:
   title: Jiawei Shan
