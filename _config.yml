@@ -15,14 +15,13 @@ sass:
 
 permalink: /posts/:title/
 
-show_excerpts: true
+show_excerpts: false
 
 texture:
   title: Jiawei Shan
   tagline: Personal Blog
   date_format: "%b %-d, %Y"
   style: black
-  showNav: false
   showPicker: false
   showNav: true
 
