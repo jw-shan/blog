@@ -3,7 +3,7 @@ layout: post
 title:  "Connecting to GitHub with SSH"
 date:   2020-02-24 00:20 
 ---
-We want to use the jupyter notebook in the remote server.
+With SSH keys, you can connect to GitHub without supplying your username or password at each visit.
 
 ## 1. Generate a SSH key
 ```bash
