@@ -5,54 +5,69 @@ date:   2020-02-24 00:20
 ---
 We want to use the jupyter notebook in the remote server.
 
-## 1.Set password
-Execute `ipython`.
-```python
-In [1]: from notebook.auth import passwd
-In [2]: passwd()
-Enter password:
-Verify password:
-Out[2]: 'sha1:8e571a9408f9:6db9d90006692cf665fd206664f2a28e2d9f7582'
-```
-
-## 2. Modify configuration file
-Open the file `~/.jupyter/jupyter_notebook_config.py` via `vim` or others, and add the following contents.
-```python
-c.NotebookApp.ip='localhost'
-c.NotebookApp.password = u'sha1:8e571a9408f9:6db9d90006692cf665fd206664f2a28e2d9f7582'
-c.NotebookApp.open_browser = False
-c.NotebookApp.port = 8570
-```
-
-## 3. Initialize jupyter notebook
-In the server, execute `jupyter notebook`.
-
-## 4. Set up a link from localhost to the remote server
-In local system, execute the following command
+## 1. Generate a SSH key
 ```bash
-ssh -f -N -L localhost:8888:localhost:8570 shanjiawei2019@10.224.255.112
+$ ssh-keygen -t rsa -b 4096 -C "jwshan423@gmail.com"
 ```
-The visit `http://localhost:8888` in the browser.
 
----
+Your should type a passphrase at the prompt `> Enter passphrase (empty for no passphrase): `
 
-## Simplify -- autoconnnection 
-First install `expect` via `sudo apt install expect`, then create file `~/.script_ssh/jupyter_notebook_isbd.sh` and input the following contents.
+## 2.Add the SSH key to the ssh-agent
 ```bash
-#!/usr/bin/expect
-set timeout 20
-set password "yourpassword"
-spawn ssh -L localhost:8887:localhost:8570 -f -N -p 5102 shanjiawei2019@10.224.255.112
-expect "*password:"
-send "$password\n"
-interact
+$ eval "$(ssh-agent -s)"
+> Agent pid 39
+$ ssh-add ~/.ssh/id_rsa
 ```
 
-Then add the following command in the file `~/.bashrc`
+Then refer to this [help page](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) and complete the following steps.
+
+1. `cat ~/.ssh/id_ras.pub` and copy the content to your clipboard.
+
+2. Enter the  homepage of your [github](https://github.com/), click the profile photo, then click **Setting**.
+
+3. In the user settings sidebar, click **SSH and GPG keys**.
+4. Click **New SSH key** or **Add SSH key**.
+5. In the "Title" field, add a descriptive label for the new key. For example, if you're using a personal Mac, you might call this key "Personal MacBook Air".
+6. Paste your key into the "Key" field.
+7. Click **Add SSH key**.
+8. If prompted, confirm your GitHub password.
+
+## 3. Test the connection to github
 ```bash
-alias ipynb="wslview http://localhost:8888; ~/.script_ssh/jupyter_notebook_isbd.sh"
+$ ssh -T git@github.com
+# Attempts to ssh to GitHub
 ```
-Execute `source ~/.bashrc`.
 
-Later it is suffices to operate `ipynb` when you want to use jupyter notebook.
+If you receive an error message, see [this](https://help.github.com/en/github/authenticating-to-github/error-permission-denied-publickey).
+
+## 4. Auto-lauching `ssh-agent`
+Paste the following lines into `~/.bashrc`
+```bash
+env=~/.ssh/agent.env
+
+agent_load_env () { test -f "$env" && . "$env" >| /dev/null ; }
+
+agent_start () {
+    (umask 077; ssh-agent >| "$env")
+    . "$env" >| /dev/null ; }
+
+agent_load_env
+
+# agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2= agent not running
+agent_run_state=$(ssh-add -l >| /dev/null 2>&1; echo $?)
+
+if [ ! "$SSH_AUTH_SOCK" ] || [ $agent_run_state = 2 ]; then
+    agent_start
+    ssh-add
+elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
+    ssh-add
+fi
+
+unset env
+```
+
+and `source ~/.bashrc`.
+
+## 5. How to use
+Then you can clone with SSH, for example `git@github.com:jw-shan/blog.git`.
 
