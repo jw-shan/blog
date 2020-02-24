@@ -4,11 +4,9 @@ title:  " Connecting to GitHub with SSH"
 date:   2020-02-24 13:28 
 categories: Linux
 ---
-With SSH keys, you can connect to GitHub without supplying your username or password at each visit. Reference: [Github Help](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
-
+With SSH keys, you can connect to GitHub without supplying your username or password at each visit.
 
 ## 1. Generate a SSH key
-
 ```bash
 $ ssh-keygen -t rsa -b 4096 -C "jwshan423@gmail.com"
 ```
@@ -16,7 +14,6 @@ $ ssh-keygen -t rsa -b 4096 -C "jwshan423@gmail.com"
 Your should type a passphrase at the prompt `> Enter passphrase (empty for no passphrase): `
 
 ## 2.Add the SSH key to the ssh-agent
-
 ```bash
 $ eval "$(ssh-agent -s)"
 > Agent pid 39
@@ -37,7 +34,6 @@ Then refer to this [help page](https://help.github.com/en/github/authenticating-
 8. If prompted, confirm your GitHub password.
 
 ## 3. Test the connection to github
-
 ```bash
 $ ssh -T git@github.com
 # Attempts to ssh to GitHub
@@ -46,9 +42,7 @@ $ ssh -T git@github.com
 If you receive an error message, see [this](https://help.github.com/en/github/authenticating-to-github/error-permission-denied-publickey).
 
 ## 4. Auto-lauching `ssh-agent`
-
 Paste the following lines into `~/.bashrc`
-
 ```bash
 env=~/.ssh/agent.env
 
@@ -76,6 +70,5 @@ unset env
 and `source ~/.bashrc`.
 
 ## 5. How to use
-
 Then you can clone with SSH, for example `git@github.com:jw-shan/blog.git`.
 
