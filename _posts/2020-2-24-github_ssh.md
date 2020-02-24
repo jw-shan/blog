@@ -5,7 +5,8 @@ date:   2020-02-24 13:28
 categories: Linux
 ---
 
-With SSH keys, you can connect to GitHub without supplying your username or password at each visit. Reference: [Github Help](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
+With SSH keys, you can connect to GitHub without supplying your username or password at each visit. Reference: [Github Help](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
+
 
 ## 1 Generate a SSH key
 
