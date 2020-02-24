@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Running a Jupyter notebook from a remote server"
+title:  "Connecting to GitHub with SSH"
 date:   2020-02-24 00:20 
 ---
 We want to use the jupyter notebook in the remote server.
