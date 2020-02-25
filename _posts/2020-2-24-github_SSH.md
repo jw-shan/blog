@@ -21,7 +21,7 @@ $ ssh-add ~/.ssh/id_rsa
 
 Then refer to this [help page](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) and complete the following steps.
 
-1. `cat ~/.ssh/id_ras.pub` and copy the content to your clipboard.
+1. `cat ~/.ssh/id_rsa.pub` and copy the content to your clipboard.
 
 2. Enter the  homepage of your [github](https://github.com/), click the profile photo, then click **Setting**.
 
