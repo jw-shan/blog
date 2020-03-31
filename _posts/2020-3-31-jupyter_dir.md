@@ -14,7 +14,7 @@ cd /d E:\PythonProject\
 jupyter notebook
 ```
 
-But it seems a little inconvenient. Below is a method using [WSL terminal](https://mskyaxl.github.io/wsl-terminal/README.zh_CN.html).
+But it seems a little inconvenient. Below is a method using the `cmdtool` of [WSL terminal](https://mskyaxl.github.io/wsl-terminal/README.zh_CN.html).
 
 - First running `tools/1-add-open-wsl-terminal-here-menu.js` and `tools/2-add-wsl-terminal-dir-to-path.js`.
 
