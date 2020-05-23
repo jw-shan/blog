@@ -19,7 +19,7 @@ show_excerpts: true
 base_url: /blog
 
 texture:
-  title: Jiawei`s Home
+  title: Jiawei's Home
   tagline: Blog or Memo
   date_format: "%b %-d, %Y"
   style: black
