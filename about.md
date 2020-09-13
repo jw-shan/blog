@@ -6,11 +6,9 @@ permalink: /about/
 
 ### Jiawei Shan(单嘉伟)
 
-Ph D Candidate in [Institute of Statistics and Big Data](http://isbd.ruc.edu.cn/), [Renmin university of China](https://www.ruc.edu.cn/).
-
-**Address**：No. 59 Zhongguancun Street, Haidian District Beijing, 100872, P.R. China.
+Ph.D. Candidate of Statistics, [Institute of Statistics and Big Data](http://isbd.ruc.edu.cn/), [Renmin university of China](https://www.ruc.edu.cn/).
 
 
 ### Contact me
 
-[jwshan@ruc.edu.cn](mailto:jwshan@ruc.edu.cn) 
+[jwshan423@gmial.com](mailto:jwshan423@gmail.com) 
