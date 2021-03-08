@@ -6,7 +6,11 @@ permalink: /about/
 
 ### Jiawei Shan(单嘉伟)
 
-Ph.D. Candidate of Statistics, [Institute of Statistics and Big Data](http://isbd.ruc.edu.cn/), [Renmin university of China](https://www.ruc.edu.cn/).
+Ph.D. Candidate of Statistics，
+
+Institute of Statistics and Big Data，
+
+Renmin university of China.
 
 
 ### Contact me
