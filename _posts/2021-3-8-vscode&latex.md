@@ -1,9 +1,11 @@
 ---
 layout: post
 title:  "Using VSCode as LaTex IDE"
-date:   2020-03-08 16:00 
+date:   2021-03-08 16:00 
 categories: VSCode Latex
 ---
+
+This article record the configuration of the VSCode as a LaTeX IDE.
 
 ### 1. Deploy LaTex Environment
 
