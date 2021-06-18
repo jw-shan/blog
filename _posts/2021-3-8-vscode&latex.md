@@ -113,3 +113,12 @@ Install [TexLive](https://www.tug.org/texlive/).
 4. Reset
 
    
+
+---
+
+## Choose compiler
+
+```latex
+%!TEX program = pdflatex
+```
+
