@@ -43,3 +43,7 @@ This article records some common commands in LaTeX.
 \end{figure}
 ```
 
+### 3. Table
+
+[Table Gentarator](https://www.tablesgenerator.com/latex_tables).
+
