@@ -43,6 +43,29 @@ This article records some common commands in LaTeX.
 \end{figure}
 ```
 
+subplot
+
+```latex
+\begin{figure}[tb]
+    \begin{minipage}[t]{0.5\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{DSRR-spline.png}
+        % \caption{caption of figure1}
+        % \label{fig:figure1-label}
+    \end{minipage}%
+    \begin{minipage}[t]{0.5\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{DSRR-kernel.png}
+        % \caption{caption of figure2}
+        % \label{figure2-label}
+    \end{minipage}%
+\caption{caption}
+\label{label}
+\end{figure}
+```
+
+
+
 ### 3. Table
 
 [Table Gentarator](https://www.tablesgenerator.com/latex_tables).
