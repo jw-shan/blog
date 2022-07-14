@@ -38,9 +38,9 @@ sudo mv /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt.ba
 在社群里搜索安装Transmission。然后在ssh安装中文UI。
 
 ```bash
-wget https://github.com/ronggang/transmission-web-control/raw/master/release/install-tr-control-cn.sh
+wget https://gitee.com/culturist/transmission-web-control/raw/master/release/install-tr-control-gitee.sh
 
-bash install-tr-control-cn.sh
+bash install-tr-control-gitee.sh
 ```
 
 修改账号密码编辑配置文件中的`rpc-password`。
@@ -49,6 +49,6 @@ bash install-tr-control-cn.sh
 vim /volume1/@appstore/transmission/var/settings.json
 ```
 
-
+参考：https://github.com/ronggang/transmission-web-control/wiki/Installation-For-DSM-CN
 
 ### 
