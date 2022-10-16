@@ -15,9 +15,11 @@ Install [MacTex](https://www.tug.org/mactex/) for MacOS or [TexLive](https://www
 
 1. Download and install [VSCode](https://code.visualstudio.com/).
 
-2.  Press `Ctrl/cmd+Shift+X`, then install then `LaTex Workshop` extension.
+2. Press `Ctrl/cmd+Shift+X`, then install then `LaTex Workshop` extension.
 
 3. Press `Ctrl/cmd+Shift+P` and search `json`, then open user setting (JSON).
+
+4. modify setting.json as follows.
 
    ```json
    {
@@ -161,7 +163,7 @@ Install [MacTex](https://www.tug.org/mactex/) for MacOS or [TexLive](https://www
    }
    ```
 
-4. Save and reset.
+5. Save and reset.
 
    
 
