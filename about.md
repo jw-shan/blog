@@ -15,4 +15,4 @@ Renmin university of China.
 
 ### Contact me
 
-[jwshan423@gmial.com](mailto:jwshan423@gmail.com) 
+[jwshan423@gmail.com](mailto:jwshan423@gmail.com) 
