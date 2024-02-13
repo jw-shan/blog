@@ -4,13 +4,7 @@ title: About
 permalink: /about/
 ---
 
-### Jiawei Shan(单嘉伟)
-
-Ph.D. Candidate of Statistics，
-
-Institute of Statistics and Big Data，
-
-Renmin university of China.
+### Jiawei Shan
 
 
 ### Contact me
